@@ -1,0 +1,6 @@
+.vscode
+venv*/
+.gitignore
+.pytest_cache
+db.sqlite3
+docker-compose.yml
