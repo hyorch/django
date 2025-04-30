@@ -19,3 +19,25 @@ Docker-Compose Imagen Local
 ```bash
 docker-compose up -d
 ```
+
+## Develop
+
+```bash
+#add app
+docker exec -it web bash
+python manage.py startapp usuarios
+docker-compose exec web python manage.py startapp usuarios # Alternativa
+
+python manage.py showmigrations
+python manage.py makemigrations usuarios
+python manage.py migrate
+
+python manage.py createsuperuser
+
+# ejecutar tests
+python manage.py tests
+```
+
+
+https://gitlab.com/debsdaniel/djpro_ctrl_comb/-/tree/main?ref_type=heads
+
